@@ -171,6 +171,9 @@ footer div p{
     .main-feed p{
         font-size:90px;
     }
+    .future-weather{
+        margin-top:-20px;
+    }
 }   
 @media(max-width:340px){
     .main-feed p{
