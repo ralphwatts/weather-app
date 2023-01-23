@@ -1,2 +1,2 @@
 # React Weather App
-This is a Weather Web App built in React. This is a React and design demo/exercise.
+A Weather Web App built in React that fetches data from the weatherapi.com API. This is a React and design demo/exercise.
