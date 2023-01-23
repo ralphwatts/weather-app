@@ -26,7 +26,7 @@ function CurrentLocationInfo() {
         position => {
           const lat = position.coords.latitude;
           const lon = position.coords.longitude;
-          fetch(`http://api.weatherapi.com/v1/current.json?key=fd3ff7261f4242a7b64202129231901&q=${lat},${lon}&aqi=no`)
+          fetch(`https://api.weatherapi.com/v1/current.json?key=fd3ff7261f4242a7b64202129231901&q=${lat},${lon}&aqi=no`)
             .then(response => response.json())
             .then(data => {
               setTemp(data.current.temp_f);
@@ -50,7 +50,7 @@ function CurrentLocationInfo() {
 
   useEffect(() => {
     if(!location.name) return;
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=fd3ff7261f4242a7b64202129231901&q=${location.name}&days=7&aqi=no&alerts=no`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=fd3ff7261f4242a7b64202129231901&q=${location.name}&days=7&aqi=no&alerts=no`)
       .then(response => response.json())
       .then(data => {
         setThreeAMTemp(data.forecast.forecastday[0].hour[2].temp_f);
@@ -66,7 +66,7 @@ function CurrentLocationInfo() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch(`http://api.weatherapi.com/v1/current.json?key=fd3ff7261f4242a7b64202129231901&q=${e.target.location.value}&aqi=no`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=fd3ff7261f4242a7b64202129231901&q=${e.target.location.value}&aqi=no`)
       .then(response => response.json())
       .then(data => {
         setTemp(data.current.temp_f);
